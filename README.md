@@ -148,7 +148,3 @@ enterprise-order-system-monolith/
 ```
 
 ---
-
-## 👩‍💻 Author
-**Prathyusha** — Enterprise Order System Monolith  
-Eclipse Workspace: `C:\Users\pprat\eclipse-workspace\enterprise-order-system-monolith`
