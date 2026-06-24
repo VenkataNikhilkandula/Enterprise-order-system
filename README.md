@@ -1,7 +1,7 @@
 Enterprise Order System
 
 A production-style Spring Boot Order Management System demonstrating enterprise backend development concepts such as layered architecture, transactional processing, idempotency, inventory validation, payment processing, and database persistence.
-
+-------------------------------------------------------------
 🚀 Features
 User Management
 Order Management
@@ -15,6 +15,7 @@ Spring Data JPA
 Exception Handling
 Swagger/OpenAPI Documentation
 Enterprise Layered Architecture
+------------------------------------------------------
 🏗️ Architecture
 Client
    │
@@ -29,6 +30,42 @@ Repository Layer
    │
    ▼
 MySQL Database
+------------------------------------------------------
+Project Structure
+src/main/java
+│
+├── controller
+│   ├── UserController
+│   ├── OrderController
+│   ├── InventoryController
+│   └── PaymentController
+│
+├── service
+│   ├── UserService
+│   ├── OrderService
+│   ├── InventoryService
+│   └── PaymentService
+│
+├── repository
+│   ├── UserRepository
+│   ├── OrderRepository
+│   ├── InventoryRepository
+│   └── PaymentRepository
+│
+├── entity
+│   ├── User
+│   ├── Order
+│   ├── Inventory
+│   └── Payment
+│
+└── dto
+Future Enhancements
+JWT Authentication
+Role Based Authorization
+Kafka Event Streaming
+Email Notifications
+Redis Caching
+--------------------------------------------------
 Modules
 Enterprise Order System
 │
@@ -36,6 +73,7 @@ Enterprise Order System
 ├── Orders
 ├── Inventory
 └── Payments
+-----------------------------------------------
 🛠️ Tech Stack
 Technology	Version
 Java	17+
@@ -45,6 +83,7 @@ MySQL	8.x
 Maven	3.9+
 Lombok	Latest
 Swagger/OpenAPI	Latest
+---------------------------------------------
 Database Schema
 Users Table
 CREATE TABLE users (
@@ -58,6 +97,7 @@ id	username	email
 5	sai	sai@enterprise.com
 6	yashwanth	yashwanth@enterprise.com
 7	keerthi	keerthi@enterprise.com
+-------------------------------------------------------------
 Inventory Table
 CREATE TABLE inventory (
     product_id BIGINT PRIMARY KEY,
@@ -70,6 +110,7 @@ product_id	product_name	stock
 105	Mobile	100
 106	Notebook	50
 107	Speakers	150
+----------------------------------------------------------------
 Orders Table
 CREATE TABLE orders (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -87,6 +128,7 @@ id	status	total
 1	CONFIRMED	500.00
 2	CONFIRMED	1000.00
 3	FAILED	1500.00
+-----------------------------------------------------------
 Payments Table
 CREATE TABLE payments (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
@@ -99,6 +141,7 @@ Sample Data
 id	amount	status
 1	500.00	COMPLETED
 2	1000.00	COMPLETED
+-----------------------------------------------------------
 API Endpoints
 User APIs
 Get All Users
@@ -122,6 +165,7 @@ Request
   "username": "john",
   "email": "john@example.com"
 }
+---------------------------------------------
 Inventory APIs
 Get Inventory
 GET /inventory/{productId}
@@ -198,6 +242,7 @@ Example
 X-Idempotency-Key: ORDER-001
 
 If the same key is submitted multiple times, the system returns the previously processed order instead of creating duplicates.
+----------------------------------------------------------------------
 
 Swagger Documentation
 
@@ -223,41 +268,3 @@ mvn spring-boot:run
 Application starts on:
 
 http://localhost:8080
-Project Structure
-src/main/java
-│
-├── controller
-│   ├── UserController
-│   ├── OrderController
-│   ├── InventoryController
-│   └── PaymentController
-│
-├── service
-│   ├── UserService
-│   ├── OrderService
-│   ├── InventoryService
-│   └── PaymentService
-│
-├── repository
-│   ├── UserRepository
-│   ├── OrderRepository
-│   ├── InventoryRepository
-│   └── PaymentRepository
-│
-├── entity
-│   ├── User
-│   ├── Order
-│   ├── Inventory
-│   └── Payment
-│
-└── dto
-Future Enhancements
-JWT Authentication
-Role Based Authorization
-Kafka Event Streaming
-Email Notifications
-Redis Caching
-Docker Support
-Kubernetes Deployment
-CI/CD Pipeline
-Microservices Migration
