@@ -93,10 +93,10 @@ CREATE TABLE users (
 );
 Sample Data
 id	username	email
-4	nikhil	nikhil@enterprise.com
-5	sai	sai@enterprise.com
-6	yashwanth	yashwanth@enterprise.com
-7	keerthi	keerthi@enterprise.com
+1	nikhil	nikhil@enterprise.com
+2	sai	sai@enterprise.com
+3	yashwanth	yashwanth@enterprise.com
+4	keerthi	keerthi@enterprise.com
 -------------------------------------------------------------
 Inventory Table
 CREATE TABLE inventory (
@@ -106,10 +106,10 @@ CREATE TABLE inventory (
 );
 Sample Data
 product_id	product_name	stock
-104	Enterprise Desktop	80
-105	Mobile	100
-106	Notebook	50
-107	Speakers	150
+101	Enterprise Desktop	80
+102	Mobile	100
+103	Notebook	50
+104	Speakers	150
 ----------------------------------------------------------------
 Orders Table
 CREATE TABLE orders (
@@ -151,7 +151,7 @@ Response
 
 [
   {
-    "id": 4,
+    "id": 1,
     "username": "nikhil",
     "email": "nikhil@enterprise.com"
   }
@@ -172,7 +172,7 @@ GET /inventory/{productId}
 
 Example
 
-GET /inventory/104
+GET /inventory/103
 Order APIs
 Create Order
 POST /orders
@@ -185,8 +185,8 @@ X-Idempotency-Key: ORDER-001
 Request
 
 {
-  "userId": 4,
-  "productId": 104,
+  "userId": 1,
+  "productId": 101,
   "quantity": 2,
   "total": 500.00
 }
