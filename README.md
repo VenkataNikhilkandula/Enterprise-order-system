@@ -1,4 +1,4 @@
-Enterprise Order System
+🏢 Enterprise Order System
 
 A production-style Spring Boot Order Management System demonstrating enterprise backend development concepts such as layered architecture, transactional processing, idempotency, inventory validation, payment processing, and database persistence.
 -------------------------------------------------------------
